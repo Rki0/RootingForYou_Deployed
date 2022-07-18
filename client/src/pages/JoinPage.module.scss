@@ -1,0 +1,60 @@
+.topDiv {
+  background-color: #8b7b75;
+  width: 100vw;
+  height: 100vh;
+  padding: 5px 0;
+}
+
+.titleDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.joinTitle {
+  font-size: 30px;
+  color: #efdcd5;
+}
+
+.styledDiv {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  background-color: #a69b97;
+
+  input {
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    height: 90%;
+    background-color: transparent;
+    color: #efdcd5;
+    font-size: 15px;
+    font-weight: bold;
+
+    &::placeholder {
+      font-size: 15px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  background-color: #d3b8ae;
+  border-radius: 10px;
+
+  button {
+    all: unset;
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    cursor: pointer;
+  }
+}

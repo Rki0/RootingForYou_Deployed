@@ -1,0 +1,110 @@
+.topDiv {
+  width: 100vw;
+  height: 100vh;
+  padding: 5px 0;
+  background-color: #8c7b75;
+}
+
+.overallForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.divStyle {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  background-color: #a69b97;
+
+  input {
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    height: 90%;
+    background-color: transparent;
+    color: #efdcd5;
+    font-size: 15px;
+    font-weight: bold;
+
+    &::placeholder {
+      font-size: 15px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+label {
+  color: #efdcd5;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+textarea {
+  border: none;
+  padding: 0;
+  width: 100vw;
+  height: 30vh;
+  resize: none;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+  &::placeholder {
+    font-size: 15px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.anonymousDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 5px;
+
+  label {
+    margin: 0;
+  }
+
+  input {
+    margin: 0;
+  }
+}
+
+.pleaseAnonymous {
+  width: 110px;
+}
+
+.checkLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  background-color: #d3b8ae;
+  border-radius: 10px;
+
+  button {
+    all: unset;
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    cursor: pointer;
+  }
+}

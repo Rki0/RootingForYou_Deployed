@@ -1,0 +1,17 @@
+.mypageUl {
+  list-style-type: none;
+  padding: 0;
+  border-top: 1px dotted #8c7b75;
+
+  li {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px dotted #8c7b75;
+  }
+}
+
+.linkTag {
+  all: unset;
+  display: inline-block;
+  width: 100%;
+}

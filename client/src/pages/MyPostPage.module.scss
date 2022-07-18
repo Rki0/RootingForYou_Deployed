@@ -1,0 +1,53 @@
+.myPostUl {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0;
+  background-color: #efdcd5;
+  width: 100vw;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.singlePost {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 93px;
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #a1887f;
+}
+
+.postHeader {
+  border-bottom: 1px dotted black;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.postTitle {
+  font-size: 25px;
+}
+
+.deleteBtn {
+  all: unset;
+  cursor: pointer;
+}
+
+.postTime {
+  margin: 0;
+  margin-bottom: 3px;
+  border-bottom: 1px dotted black;
+}
+
+.postText {
+  margin: 0;
+}

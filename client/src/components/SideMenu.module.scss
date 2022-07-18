@@ -1,0 +1,56 @@
+nav {
+  z-index: 10;
+  display: block;
+  height: 100vh;
+  padding-top: 3%;
+}
+
+.sideMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  background-color: #efdcd5;
+
+  &.active {
+    display: flex;
+    width: 40%;
+  }
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  padding-left: 3%;
+}
+
+.closeBtn {
+  all: unset;
+  text-align: center;
+  margin-right: 10%;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid white;
+
+  li {
+    padding: 10px;
+    border-top: 1px solid white;
+  }
+}
+
+.linkTag {
+  // all: unset;이 모든 스타일을 지우기 때문에 display: block;을 뒤에 놔야함
+  all: unset;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.logOutBtn {
+  all: unset;
+}

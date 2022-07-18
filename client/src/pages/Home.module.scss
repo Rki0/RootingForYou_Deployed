@@ -1,0 +1,34 @@
+.wholePost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #efdcd5;
+  width: 100vw;
+
+  p,
+  h1 {
+    margin: 0;
+  }
+}
+
+.singlePost {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 93px;
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #a1887f;
+  cursor: pointer;
+}
+
+.author {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted black;
+}
