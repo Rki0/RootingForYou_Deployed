@@ -12,6 +12,9 @@ mongoDB 애드온을 사용할 수 없었기 때문에, 순수하게 코드로�
 
 필자는 Front는 Netlify에, Back은 Heroku에 나눠서 배포했다.
 
+[Front-end Github 링크](https://github.com/Rki0/RootingForYou_Front/tree/master/client)  
+[Back-end Github 링크](https://github.com/Rki0/Nodejs_Heroku)
+
 ## 📂 파일 구조
 
 클라이언트 부분의 파일 구조는 다음과 같다.  
@@ -104,6 +107,26 @@ token을 cookie에 저장하는데, 꼭, 뒤에 해당 옵션을 설정해줘야
 
 여기까지가 Back-end 배포를 하기 위한 기본 설정이다.  
 하나라도 빠뜨리지말고 진행해주자.
+
+### 😛 설정할 것 5 - Heroku Kaffeine
+
+Heroku는 30분 동안 request가 없으면 sleep 모드로 들어간다.  
+sleep 모드에 들어가면 재시동 되는데 시간이 걸려서, UX에 좋지않기 때문에 이를 방지해야한다.  
+여러가지 방법이 있는데, 필자는 Kaffeine이라고 불리는 방법을 사용할 것이다.  
+30분 단위로 request를 보내서 서버를 깨워주는 것이다.  
+[Heroku Kaffeine 링크](http://kaffeine.herokuapp.com/)
+
+<img width="1021" alt="스크린샷 2022-07-18 오후 11 55 33" src="https://user-images.githubusercontent.com/86224851/179539777-8e3a99b7-bc5c-4d72-807a-34d58b5d3720.png">
+
+접속하면 위와 같은 페이지를 볼 수 있다.  
+rootingforyou라고 써있는 것은 필자가 적어놓은 것으로, 본인의 Heroku 배포 주소에서 저 부분만 붙여넣어주면 된다.  
+그리고 아래 하늘색 버튼을 누르면, 그 아래에 초록색 문구가 뜨면서 등록이 완료된다.  
+중간에 I want a bedtime! 이라는 문구와 함께 시간을 설정하는 것이 있다.  
+이는, 저 시간부터 6시간 동안은 request를 보내지 않겠다고 설정하는 것이다.  
+Heroku는 하루 18시간을 무료로 사용할 수 있기에(이는 신용카드 등록으로 해결할 수 있다. 신용카드를 등록만 하면 한달 1000시간으로 늘어나는 모양),  
+sleep 모드를 6시간은 해줘야하는데, 저 곳에서 설정한 시간부터 6시간 동안 request를 멈춰서 sleep 모드가 될 수 있게 만들어주는 것이다. 사용자가 없을 법한 시간으로 지정하면 될 것 같다.  
+물론, 이건 개인 프로젝트니까 가능한 것이다...  
+실제 유저들을 모아야하는 프로젝트에서는 좋지않은 방법이므로 그 때는 AWS로..!!
 
 ## 😵 Netlify (Front-end 배포)
 
