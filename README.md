@@ -108,7 +108,28 @@ token을 cookie에 저장하는데, 꼭, 뒤에 해당 옵션을 설정해줘야
 여기까지가 Back-end 배포를 하기 위한 기본 설정이다.  
 하나라도 빠뜨리지말고 진행해주자.
 
-### 😛 설정할 것 5 - Heroku Kaffeine
+### 😛 설정할 것 5 - package.json에 engines 설정하기
+
+Heroku에 배포할 때는 반드시 package.json에 engines를 입력해줘야한다.  
+현재 본인이 사용하고 있는 node와 npm의 버전을 입력해주면 된다.
+
+```
+$ node -v
+
+$ npm -v
+```
+
+터미널에 위 커맨드를 입력하면 현재의 node, npm의 버전을 알 수 있다.  
+버전을 아래와 같은 형태로 입력해주도록 하자!
+
+```js
+  "engines": {
+    "node": "18.0.0",
+    "npm": "8.6.0"
+  }
+```
+
+### 😛 설정할 것 6 - Heroku Kaffeine
 
 Heroku는 30분 동안 request가 없으면 sleep 모드로 들어간다.  
 sleep 모드에 들어가면 재시동 되는데 시간이 걸려서, UX에 좋지않기 때문에 이를 방지해야한다.  
